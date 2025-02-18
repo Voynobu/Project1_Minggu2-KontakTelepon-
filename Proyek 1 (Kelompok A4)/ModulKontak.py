@@ -26,8 +26,8 @@ def CariKontak(Nama):
     contacts = MuatKontak()
     hasil = []
     for contact in contacts:
-        if name.lower() in contact[0].lower():
-            results.append(contact)
+        if Nama.lower() in contact[0].lower():
+            hasil.append(contact)
 
     if hasil:
         print("\n Hasil Pencarian:")
