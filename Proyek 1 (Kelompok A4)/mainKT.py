@@ -8,7 +8,8 @@ while 1:
     print("1. Lihat Daftar Kontak")
     print("2. Tambah Kontak")
     print("3. Hapus Kontak")
-    print("4. Keluar")
+    print("4. Cari Kontak")
+    print("5. Keluar")
 
     pilihan = int(input("\nMasukkan Pilihan "))
     if pilihan == 1:
@@ -16,8 +17,10 @@ while 1:
     elif pilihan == 2:
 
     elif pilihan == 3:
-        
+
     elif pilihan == 4:
+        
+    elif pilihan == 5:
         break
 
 
