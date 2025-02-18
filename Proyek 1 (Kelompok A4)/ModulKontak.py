@@ -1,6 +1,10 @@
+import os
+
+fileKontak = "daftarkontak.txt"
+
 # Rangga Muhamad fajar
-def TambahKontak(NamaNew, NomorNew):
-    template = f"\n Nama : {NamaNew}, Nomor : {NomorNew}"
+def TambahKontak(Nama, Nomor):
+    template = f"\n Nama : {Nama}, Nomor : {Nomor}"
     Buka = open("daftarkontak.txt","a")
     Buka.write(template)
     
@@ -11,5 +15,25 @@ def TampilKontak():
     Buka.close()
 
 # Nauval Khairiyan
-def CariKontak():
+def MuatKontak():
+    if not os.path.exists(fileKontak):
+        return []
+    with open(fileKontak, "r") as file:
+        contacts = file.readlines()
+    return [contact.strip().split(",") for contact in contacts]
+
+def CariKontak(Nama):
+    contacts = MuatKontak()
+    hasil = []
+    for contact in contacts:
+        if name.lower() in contact[0].lower():
+            results.append(contact)
+
+    if hasil:
+        print("\n🔍 Hasil Pencarian:")
+        for contact in hasil:
+            print(f"{contact[0]} - {contact[1]}")
+    else:
+        print("Kontak tidak ditemukan.")
+    
     
