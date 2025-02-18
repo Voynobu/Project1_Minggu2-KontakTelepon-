@@ -30,7 +30,7 @@ def CariKontak(Nama):
             results.append(contact)
 
     if hasil:
-        print("\n🔍 Hasil Pencarian:")
+        print("\n Hasil Pencarian:")
         for contact in hasil:
             print(f"{contact[0]} - {contact[1]}")
     else:
