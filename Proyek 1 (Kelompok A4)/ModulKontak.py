@@ -1,5 +1,4 @@
 import os
-
 fileKontak = "daftarkontak.txt"
 
 # Rangga Muhamad fajar
@@ -7,6 +6,7 @@ def TambahKontak(Nama, Nomor):
     template = f"{Nama}, {Nomor}\n"
     Buka = open("daftarkontak.txt","a")
     Buka.write(template)
+    Buka.close()
     
 # Zaidan Zulkaisi Setiaji
 def TampilKontak():
@@ -16,6 +16,7 @@ def TampilKontak():
 
 # Nauval Khairiyan
 def MuatKontak():
+    
     if not os.path.exists(fileKontak):
         return []
     with open(fileKontak, "r") as file:
@@ -36,7 +37,7 @@ def CariKontak(Nama):
     else:
         print("Kontak tidak ditemukan.")
 
-# Muhamad Dino Dermawan
+# Dino Darmawan
 def HapusKontak(NamaHapus):
     if not os.path.exists(fileKontak):
         print("Tidak ada kontak yang tersimpan")
@@ -54,5 +55,4 @@ def HapusKontak(NamaHapus):
         print(f"Kontak '{NamaHapus}' berhasil dihapus")
     else:
         print(f"Kontak '{NamaHapus}' tidak ditemukan")
-    
     
