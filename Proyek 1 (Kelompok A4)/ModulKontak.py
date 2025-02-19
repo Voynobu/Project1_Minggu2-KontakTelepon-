@@ -4,7 +4,7 @@ fileKontak = "daftarkontak.txt"
 
 # Rangga Muhamad fajar
 def TambahKontak(Nama, Nomor):
-    template = f"\n Nama : {Nama}, Nomor : {Nomor}"
+    template = f"{Nama}, {Nomor}\n"
     Buka = open("daftarkontak.txt","a")
     Buka.write(template)
     
