@@ -35,5 +35,24 @@ def CariKontak(Nama):
             print(f"{contact[0]} - {contact[1]}")
     else:
         print("Kontak tidak ditemukan.")
+
+# Muhamad Dino Dermawan
+def HapusKontak(NamaHapus):
+    if not os.path.exists(fileKontak):
+        print("Tidak ada kontak yang tersimpan")
+        return
+    with open(fileKontak, "r") as file:
+        lines = file.readlines()
+    with open(fileKontak, "w") as file:
+        kontak_dihapus = False
+        for line in lines:
+            if NamaHapus.lower() not in line.lower():
+                file.write(line)
+            else:
+                kontak_dihapus = True
+    if kontak_dihapus:
+        print(f"Kontak '{NamaHapus}' berhasil dihapus")
+    else:
+        print(f"Kontak '{NamaHapus}' tidak ditemukan")
     
     
